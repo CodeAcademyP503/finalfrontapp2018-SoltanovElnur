@@ -1,0 +1,563 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB"
+        crossorigin="anonymous">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css">
+    <link rel="stylesheet" href="/maps/documentation/javascript/cgc/demos.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <div>
+        <header>
+            <nav class="navbar navbar-expand-lg  navbar-dark bg-dark" style="height: 55px; background: #3a4149 !important">
+
+                <button class="navbar-toggler" id="mv-left">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <a class="navbar-brand text-center" href="#">
+                    <img src="images/logo.svg" alt="" style="height: 25px; width: 89px">
+                </a>
+
+                <button class="navbar-toggler" id="mv-right">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav mr-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" id="nav-link" href="#">
+                                <span class="navbar-toggler-icon"></span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Dashboard</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Users</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Settings</a>
+                        </li>
+                    </ul>
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-item-sab dropdown d-md-down-none">
+                            <a href="#" class="nav-link" id="bell-acc">
+                                <i class="far fa-bell">
+                                    <span class="badge badge-pill badge-danger badge-red">5</span>
+                                </i>
+                            </a>
+                            <div class="hidder_dd  dropdown-menu dropdown-menu-right bell-acc">
+                                <div class="dropdown-header text-center">
+                                    <strong>You have 4 messages</strong>
+                                </div>
+                                <a href="#" class="dropdown-item"></a>
+                                <a href="#" class="dropdown-item"></a>
+                                <a href="#" class="dropdown-item"></a>
+                                <a href="#" class="dropdown-item"></a>
+                                <div class="dropdown-header text-center">
+                        </li>
+                        <li class="nav-item-sab dropdown d-md-down-none">
+                            <a href="#" class="nav-link" id="dash-dd">
+                                <i class="fas fa-list-ul">
+                                    <span class="badge badge-pill badge-warning">15</span>
+                                </i>
+                            </a>
+                            <div class="hidder_dd dropdown-menu dropdown-menu-right dash-dd">
+                                <div class="dropdown-header text-center">
+                                    <strong>You have 4 messages</strong>
+                                </div>
+                                <a href="#" class="dropdown-item"></a>
+                                <a href="#" class="dropdown-item"></a>
+                                <a href="#" class="dropdown-item"></a>
+                                <a href="#" class="dropdown-item"></a>
+                                <div class="dropdown-header text-center">
+                                </div>
+                            </div>
+                        </li>
+                        <li class="nav-item-sab dropdown d-md-down-none">
+                            <a href="#" class="nav-link" id="messages">
+                                <i class=" far fa-envelope-open">
+                                    <span class="badge badge-pill badge-info">7</span>
+                                </i>
+                            </a>
+                            <div class="hidder_dd dropdown-menu dropdown-menu-right messages">
+                                <div class="dropdown-header text-center">
+                                    <strong>You have 4 messages</strong>
+                                </div>
+                                <a href="#" class="dropdown-item"></a>
+                                <a href="#" class="dropdown-item"></a>
+                                <a href="#" class="dropdown-item"></a>
+                                <a href="#" class="dropdown-item"></a>
+                                <div class="dropdown-header text-center">
+                                </div>
+                            </div>
+                        </li>
+                        <li class="nav-item-sab dropdown d-md-down-none">
+                            <a href="#" class="nav-link" id="img-acc">
+                                <img class="rounded-circle" src="images/6.jpg" alt="#" style="width: 35px">
+                            </a>
+                            <div class="hidder_dd dropdown-menu dropdown-menu-right img-acc">
+                                <div class="dropdown-header text-center">
+                                    <strong>Account</strong>
+                                </div>
+                                <a href="#" class="dropdown-item"></a>
+                                <a href="#" class="dropdown-item"></a>
+                                <a href="#" class="dropdown-item"></a>
+                                <a href="#" class="dropdown-item"></a>
+                                <div class="dropdown-header text-center">
+                                    <strong>Settings</strong>
+                                </div>
+                                <a href="#" class="dropdown-item"></a>
+                                <a href="#" class="dropdown-item"></a>
+                                <a href="#" class="dropdown-item"></a>
+                                <a href="#" class="dropdown-item"></a>
+                                <div class="dropdown-divider"></div>
+                                <a href="#" class="dropdown-item"></a>
+                                <a href="#" class="dropdown-item"></a>
+                            </div>
+                        </li>
+                        <li class="nav-item dropdown d-md-down-none">
+                            <a href="#" class="nav-link" id="nav-link-left">
+                                <span class="navbar-toggler-icon"></span>
+                            </a>
+                        </li>
+                    </ul>
+                    </div>
+            </nav>
+        </header>
+        <div class="hr"></div>
+        <div class="wrapper">
+
+            <!-- Sidebar -->
+            <nav id="sidebar" class="sb-left" style="border-right: 1px solid #23282c; overflow-y: scroll;">
+                <ul class="list-unstyled components dashboard" style="height: -webkit-fill-available;">
+                    <a href="#" class="nav-link active ">
+                        <i class="fas fa-tachometer-alt"></i>
+                        Dashboard
+                        <span class="badge" style="background:#20a8d8; color: #23282c; margin-left: 1rem;">NEW</span>
+                    </a>
+                    <p>THEME</p>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link active">
+                            <i class="fas fa-tint"></i>
+                            Colors
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link active">
+                            <i class="fas fa-pencil-alt"></i>
+                            Typography
+                        </a>
+                    </li>
+                    <p>COMPONENTS</p>
+                    <li class="nav-item active">
+                        <a href="#" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+                            <i class="fas fa-puzzle-piece"></i>
+                            Base
+                        </a>
+                        <ul class="collapse list-unstyled" id="homeSubmenu">
+                            <li>
+                                <a href="#">Home 1</a>
+                            </li>
+                            <li>
+                                <a href="#">Home 2</a>
+                            </li>
+                            <li>
+                                <a href="#">Home 3</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#pageSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+                            <i class="fas fa-mouse-pointer"></i>
+                            Buttons
+                        </a>
+                        <ul class="collapse list-unstyled" id="pageSubmenu">
+                            <li>
+                                <a href="#">Page 1</a>
+                            </li>
+                            <li>
+                                <a href="#">Page 2</a>
+                            </li>
+                            <li>
+                                <a href="#">Page 3</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <i class="fas fa-chart-pie"></i>
+                            Charts
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#pageSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+                            <i class="fas fa-code"></i>
+                            Editors
+                        </a>
+                        <ul class="collapse list-unstyled" id="pageSubmenu">
+                            <li>
+                                <a href="#">Page 1</a>
+                            </li>
+                            <li>
+                                <a href="#">Page 2</a>
+                            </li>
+                            <li>
+                                <a href="#">Page 3</a>
+                            </li>
+                        </ul>
+                    </li>
+
+                    <li>
+                        <a href="#pageSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+                            <i class="far fa-sticky-note"></i>
+                            Forms
+                        </a>
+                        <ul class="collapse list-unstyled" id="pageSubmenu">
+                            <li>
+                                <a href="#">Page 1</a>
+                            </li>
+                            <li>
+                                <a href="#">Page 2</a>
+                            </li>
+                            <li>
+                                <a href="#">Page 3</a>
+                            </li>
+                        </ul>
+                    </li>
+
+                    <li>
+                        <a href="#" class="nav-link ">
+                            <i class="far fa-map"></i>
+                            Google Maps
+                            <span class="badge" style="background:#f86c6b; float: right; margin-top: 10px;">Pro</span>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#pageSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+                            <i class="far fa-star"></i>
+                            Icons
+                        </a>
+                        <ul class="collapse list-unstyled" id="pageSubmenu">
+                            <li>
+                                <a href="#">Page 1</a>
+                            </li>
+                            <li>
+                                <a href="#">Page 2</a>
+                            </li>
+                            <li>
+                                <a href="#">Page 3</a>
+                            </li>
+                        </ul>
+                    </li>
+
+                    <li>
+                        <a href="#pageSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+                            <i class="far fa-star"></i>
+                            Icons
+                        </a>
+                        <ul class="collapse list-unstyled" id="pageSubmenu">
+                            <li>
+                                <a href="#">Page 1</a>
+                            </li>
+                            <li>
+                                <a href="#">Page 2</a>
+                            </li>
+                            <li>
+                                <a href="#">Page 3</a>
+                            </li>
+                        </ul>
+                    </li>
+
+                    <li>
+                        <a href="#pageSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+                            <i class="far fa-bell"></i>
+                            Notifications
+                        </a>
+                        <ul class="collapse list-unstyled" id="pageSubmenu">
+                            <li>
+                                <a href="#">Page 1</a>
+                            </li>
+                            <li>
+                                <a href="#">Page 2</a>
+                            </li>
+                            <li>
+                                <a href="#">Page 3</a>
+                            </li>
+                        </ul>
+                    </li>
+
+                    <li>
+                        <a href="#pageSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+                            <i class="fas fa-bolt"></i>
+                            Plugins
+                        </a>
+                        <ul class="collapse list-unstyled" id="pageSubmenu">
+                            <li>
+                                <a href="#">Page 1</a>
+                            </li>
+                            <li>
+                                <a href="#">Page 2</a>
+                            </li>
+                            <li>
+                                <a href="#">Page 3</a>
+                            </li>
+                        </ul>
+                    </li>
+
+                    <li>
+                        <a href="#pageSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+                            <i class="fas fa-list-ul"></i>
+                            Tables
+                        </a>
+                        <ul class="collapse list-unstyled" id="pageSubmenu">
+                            <li>
+                                <a href="#">Page 1</a>
+                            </li>
+                            <li>
+                                <a href="#">Page 2</a>
+                            </li>
+                            <li>
+                                <a href="#">Page 3</a>
+                            </li>
+                        </ul>
+                    </li>
+
+                    <li>
+                        <a href="#" class="nav-link ">
+                            <i class="fas fa-calculator"></i>
+                            Widgets
+                            <span class="badge" style="background:#20a8d8;">New</span>
+                        </a>
+                    </li>
+
+                    <p>EXTRAS</p>
+
+                    <li>
+                        <a href="#pageSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+                            <i class="fas fa-star"></i>
+                            Pages
+                        </a>
+                        <ul class="collapse list-unstyled" id="pageSubmenu">
+                            <li>
+                                <a href="#">Page 1</a>
+                            </li>
+                            <li>
+                                <a href="#">Page 2</a>
+                            </li>
+                            <li>
+                                <a href="#">Page 3</a>
+                            </li>
+                        </ul>
+                    </li>
+
+                    <li>
+                        <a href="#pageSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+                            <i class="far fa-folder-open"></i>
+                            Apps
+                        </a>
+                        <ul class="collapse list-unstyled" id="pageSubmenu">
+                            <li>
+                                <a href="#">Page 1</a>
+                            </li>
+                            <li>
+                                <a href="#">Page 2</a>
+                            </li>
+                            <li>
+                                <a href="#">Page 3</a>
+                            </li>
+                        </ul>
+                    </li>
+
+                    <p>LABELS</p>
+
+                    <li>
+                        <a href="#">
+                            <i class="fas fa-circle" style="color: #f86c6b"></i>
+                            Label danger
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <i class="fas fa-circle" style="color: #20a8d8"></i>
+                            Label info
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <i class="fas fa-circle" style="color: yellow"></i>
+                            Label warning
+                        </a>
+                    </li>
+
+                    <p style="font-size: 15px;">SYSTEM UTILIZATION</p>
+
+                    <li>
+                        <span>CPU USAGE</span>
+                        <div class="progress">
+                            <div class="progress-bar w-25 bg-info" role="progressbar" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                        </div>
+                        <small>348 Processes. 1/4 Cores.</small>
+                    </li>
+                    <li>
+                        <span>MeMORY USAGE</span>
+                        <div class="progress">
+                            <div class="progress-bar w-50 bg-warning" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
+                        </div>
+                        <small>11444GB/16384MB</small>
+                    </li>
+                    <li>
+                        <span>SSD 1 USAGE</span>
+                        <div class="progress">
+                            <div class="progress-bar w-75 bg-danger" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
+                        </div>
+                        <small>243GB/256GB</small>
+                    </li>
+                </ul>
+            </nav>
+
+
+
+            <div class="hr"></div>
+            <div class="container-fluid respons-fluid" style="padding: 0px">
+                <nav aria-label="breadcrumb">
+                    <ol class="breadcrumb" style="background: #3a4149 !important; border-radius: 0px; margin-bottom: 0px; border-bottom: 1px solid #23282c; font-size: 14px;">
+                        <li class="breadcrumb-item">
+                            <a href="#">Home</a>
+                        </li>
+                        <li class="breadcrumb-item">
+                            <a href="#" class="a-admin">Admin</a>
+                        </li>
+                        <li class="breadcrumb-item" aria-current="page">Dashboard</li>
+                        <li class="d-md-down-none float-right ml-md-auto" style="margin-top:-8px;">
+                            <div aria-label="breadcrumb" class="settings">
+                                <a href="#">
+                                    <i class="far fa-comment-alt" style="padding-right: 15px;"></i>
+                                </a>
+                                <a href="#">
+                                    <i class="fas fa-chart-line">
+                                        <span style="padding-right: 15px;">Dashboard</span>
+                                    </i>
+                                </a>
+                                <a href="#">
+                                    <i class="fas fa-cog">
+                                        <span>Settings</span>
+                                    </i>
+                                </a>
+                            </div>
+                        </li>
+                    </ol>
+                </nav>
+                <div class="container-fluid">
+                    <div class="contaner">
+                        <div class="row main-header">
+                            <i class="far fa-map" style="margin: 4px 7px 0px 0px;"></i>Google Maps
+                            <a href="https://coreui.io/pro/" class="badge badge-pill" style="background-color: #f86c6b;line-height: unset; margin-left: 7px;">CoreUI Pro Component</a>
+                            <a href="#" style="margin-left: auto; margin-right: 20px; color: #4d6071;">docs</a>
+                        </div>
+                        <div class="card-body" style="background: #3a4149;`">
+                            <div id="map" style="width:100%;height:400px;"></div>
+                        </div>
+
+                    </div>
+                </div>
+
+
+
+
+
+
+
+
+
+
+                <div class="container-fluid" style="padding-left:0px; padding-right:0px">
+                    <footer class="card" style="padding-bottom: 20px; border: none; background: #3a4149; color: #c8ceca;">
+                        <div class="row">
+                            <div class="col-md-6" style="padding-top: 20px;">
+                                <div class="">
+                                    <a href="https://coreui.io/pro/" style="color: #20a8d8;">CoreUI Pro</a>
+                                    <span>© 2018 creativeLabs.</span>
+                                </div>
+                            </div>
+                            <div class="col-md-6" style="padding-top: 20px;">
+                                <div style="float: right; padding-right: 0px;">
+                                    <span>Powered by</span>
+                                    <a href="https://coreui.io/pro/">CoreUI</a>
+                                </div>
+                            </div>
+                        </div>
+                    </footer>
+                </div>
+            </div>
+            <nav id="sidebar" class="sidebar-left">
+                <ul class="nav-tabs nav mr-auto" role="tablist" style="display: -webkit-box;">
+                    <li class="nav-item">
+                        <a href="#" class="nav-link active" role="tab" data-toggle="tab" aria-selected="true">
+                            <i class="fas fa-list-ul"></i>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link">
+                            <i class="fas fa-comment-alt"></i>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link">
+                            <i class="fas fa-cog"></i>
+                        </a>
+                    </li>
+                </ul>
+
+
+                <div class="list-group-item text-center" style="background: #343b41;">
+                    <div class="list-group">
+                        <div class="row" id="row" style="border-left: 2px solid #4d6071">
+                            <strong style="margin: auto; color: #4d6071;">TODAY</strong>
+                        </div>
+                        <div class="row">
+                            <div class="col-lg-9">
+                                <span>Meeting with
+                                    <strong>Lucas</strong>
+                                </span>
+                                <small>
+                                    <i class="far fa-calendar-alt"></i>1 - 3pm
+                                    <i class="fas fa-map-marker-alt"></i> Palo Alto, CA</small>
+                            </div>
+                            <div class="col-lg-3">
+                                <img src="images/6.jpg" alt="#" class="rounded-circle">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="list-group-item"></div>
+
+                </div>
+            </nav>
+        </div>
+
+
+
+
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+            crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+            crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T"
+            crossorigin="anonymous"></script>
+        <script src="js/main.js"></script>
+        <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBwYDicnv0VvRHsTCH_wD5Wx4wAostwhLU&callback=initMap" async
+            defer></script>
+
+</body>
+
+</html>
